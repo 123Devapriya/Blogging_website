@@ -112,13 +112,13 @@ const Update = () => {
                     style={{ display: "none" }}
                     onChange={(e) => setFile(e.target.files[0])}
                 />
-                <InputTextField onChange={(e) => handleChange(e)} value={post.title} name='title' placeholder="Title" />
+                {/* <InputTextField onChange={(e) => handleChange(e)} value={post.title} name='title' placeholder="Title" /> */}
+                <InputTextField onChange={handleChange} value={post.title} name="title" placeholder="Title" />
+
                 <Button onClick={() => updateBlogPost()} variant="contained" color="primary">Update</Button>
             </StyledFormControl>
-  <StyledTextArea 
-                style={{
-       
-            backgroundColor: '#E6FFFD',
+  <StyledTextArea
+  style={{  backgroundColor: '#E6FFFD',
             border: '1px solid #ccc',
             borderRadius: '4px',
             boxShadow: '0 0 3px 2px #00B8D4',
@@ -128,14 +128,14 @@ const Update = () => {
             minHeight: '150px',
             padding: '10px',
             resize: 'vertical',
-            outline: 'none',
-          
-                }}
-                    rowsMin={5} 
-                    placeholder="what's on your mind to comment?"
-                    onChange={(e) => handleChange(e)} 
-                    value={post.description}
-                />
+            outline: 'none', }}
+  rowsMin={5}
+  placeholder="what's on your mind to comment?"
+  onChange={handleChange}
+  value={post.description}
+  name="description" // Add name attribute for the description input
+/>
+
           
         </Container>
         
