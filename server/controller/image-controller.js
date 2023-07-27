@@ -1,7 +1,7 @@
 import grid from 'gridfs-stream';
 import mongoose from 'mongoose';
 
-const url = 'http://localhost:8000';
+const url = 'https://bloggingwebsite-production-e8e8.up.railway.app/';
 
 
 let gfs, gridfsBucket;
